@@ -9,7 +9,6 @@ WORKDIR /usr/src/hexo-blog
 COPY src /usr/src/hexo-blog
 # 安装 hexo-cli
 RUN npm --registry=https://registry.npm.taobao.org install hexo-cli -g && npm install
-RUN git clone https://github.com/theme-next/hexo-theme-next themes/next
 # 生成静态文件
 RUN hexo clean && hexo g
 
